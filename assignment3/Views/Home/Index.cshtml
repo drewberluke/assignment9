@@ -1,0 +1,38 @@
+﻿@*Andrew Luke
+Sec 004
+
+For this assignment, we will revisit the “Joel Hilton Movie Collection” app we built in
+Assignment #3. As you will recall, that assignment allowed the user to enter film information
+into the form that would then be displayed in the list. However, the information in the list did
+not persist, so it was lost once the app was closed. (Not super convenient.)
+With the knowledge that we have gained since then, we will now update (or rebuild, if desired)
+that app to utilize a SQLite database and store the information that is entered permanently.
+In summary, that app consisted of:
+• Home Page: Containing a Heading and Picture
+• Podcasts Page: Containing a link to the Baconsale podcast
+• Enter Film Page: A page for the user to enter the film information.
+• Film List Page: A page to view the information for all the films that have been entered.
+We then want to add the functionality to:
+• Edit: We want the user to be able to select a film from the list to Edit and update the
+information for a film.
+• Delete: We want the user to be able to Delete a film from the list.
+Use Bootstrap styling to give the app a consistent look & feel. As always, use good
+programming habits and write clean code. We want this to feel like a complete app in the end.
+(My hope and reason for selecting a previous assignment to revisit is that you can utilize much of
+what you created in that particular assignment and focus on the new functionality in this
+assignment. But if you want extra practice for the Midterm #2, you are welcome to build the site
+from scratch.)
+Submit a link to the GitHub repository containing your assignment via Learning Suite.*@
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Joel's Movie Collection</h1>
+    <p><img src="~/img/JoelHilton.jpg" width="40%" alt="Joel Hilton Headshot" /></p>
+    <div class="btn-container">
+        <a class="btn" asp-controller="Home" asp-action="AddFilm">Add Film</a>
+        <a class="btn" asp-controller="Home" asp-action="ViewFilms">View Films</a>
+    </div>
+</div>
